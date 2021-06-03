@@ -7,7 +7,7 @@ gsettings get org.gnome.desktop.lockdown disable-lock-screen
 sudo apt install -y mc vim apt-transport-https curl dirmngr gnupg ca-certificates software-properties-common
 
 # install dev packages
-sudo apt install -y git docker
+sudo apt install -y git 
 
 # install brave browser
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -42,3 +42,8 @@ sudo snap install slack --classic
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" | sudo tee /etc/apt/sources.list.d/teams.list
 sudo apt update & sudo apt install -y teams
+
+# install docker
+curl -fecho "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nullsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+ sudo apt-get update & sudo apt-get install -y docker-ce docker-ce-cli containerd.io
