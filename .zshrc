@@ -17,7 +17,7 @@ ZSH_THEME='risto'
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-PROJECT_PATHS=(~/work/jr ~/work/jr/screenhub)
+PROJECT_PATHS=(~/work ~/work/jr/screenhub)
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -106,7 +106,11 @@ alias cd-sh='cd ~/work/jr/screenhub'
 alias cd-api='cd ~/work/jr/screenhub/api'
 alias cd-cms='cd ~/work/jr/screenhub/cms'
 alias sh-api='cd ~/work/jr/screenhub/api && docker-compose up'
-alias sh-cms='cd ~/work/jr/screenhub/cms && NODE_ENV=local yarn start'
+alias sh-cms='cd ~/work/jr/screenhub/api/cms && NODE_ENV=local yarn start'
 alias fundify='cd ~/work/jr/fundify/fundify && docker/run'
 alias docker-purge='docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi $(docker images -aq) && docker system prune --volumes'
+alias hm2='cd ~/work/kazendi/backend-web && bin/docker-run'
 
+#if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+#        source /etc/profile.d/vte.sh
+#fi
