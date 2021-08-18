@@ -20,6 +20,8 @@ ZSH_THEME='risto'
 PROJECT_PATHS=(~/work ~/work/jr/screenhub)
 
 
+SAVEHIST=10000
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
