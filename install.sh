@@ -60,3 +60,7 @@ sudo apt update & sudo apt install -y teams
 # install remmina
 sudo apt-add-repository -y -u ppa:remmina-ppa-team/remmina-next
 sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret
+
+# install Foliate e-book reader
+sudo add-apt-repository ppa:apandada1/foliate
+sudo apt install foliate
