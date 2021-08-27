@@ -4,7 +4,7 @@
 gsettings get org.gnome.desktop.lockdown disable-lock-screen
 
 # install base packages
-sudo apt install -y mc vim apt-transport-https curl dirmngr gnupg ca-certificates software-properties-common
+sudo apt install -y mc vim tmux  apt-transport-https curl dirmngr gnupg ca-certificates software-properties-common
 
 # install dev packages
 sudo apt install -y git 
@@ -15,9 +15,11 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo apt update
 sudo apt install -y brave-browser
 
-# install remmina
-sudo apt-add-repository -y -u ppa:remmina-ppa-team/remmina-next
-sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret
+# install Dropbox
+echo "deb [arch=amd64] http://linux.dropbox.com/ubuntu disco main" | sudo tee /etc/apt/sources.list.d/dropbox.list
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+sudo apt-get update & sudo apt-get install -y python3-gpg dropbox
+
 
 # install Sublime 3
 curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -35,6 +37,13 @@ sudo apt install -y shutter
 # install WebStorm
 sudo snap install webstorm --classic --edge
 
+# Install Gnome Shell Extensions support
+sudo apt-get install -y chrome-gnome-shell
+
+# install zsh
+sudo apt-get install -y zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # install Slack
 sudo snap install slack --classic
 
@@ -43,16 +52,18 @@ curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" | sudo tee /etc/apt/sources.list.d/teams.list
 sudo apt update & sudo apt install -y teams
 
-# install docker
-curl -fecho "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nullsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
- sudo apt-get update & sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+# install remmina
+sudo apt-add-repository -y -u ppa:remmina-ppa-team/remmina-next
+sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret
 
-# install Dropbox
-echo "deb [arch=amd64] http://linux.dropbox.com/ubuntu disco main" | sudo tee /etc/apt/sources.list.d/dropbox.list
-sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
-sudo apt-get update & sudo apt-get install -y python3-gpg dropbox
+# install Foliate e-book reader
+sudo add-apt-repository ppa:apandada1/foliate
+sudo apt install foliate
 
-# install zsh
-sudo apt-get install -y zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Spotify 
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install -y spotify-client
+
+# Install fd-find (https://github.com/sharkdp/fd) & fzf
+sudo apt install fd-find fzf 
