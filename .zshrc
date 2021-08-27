@@ -101,17 +101,28 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias cd-sh='cd ~/work/jr/screenhub'
-alias cd-api='cd ~/work/jr/screenhub/api'
-alias cd-cms='cd ~/work/jr/screenhub/cms'
-alias sh-api='cd ~/work/jr/screenhub/api && docker-compose up'
-alias sh-cms='cd ~/work/jr/screenhub/api/cms && NODE_ENV=local yarn start'
-alias fundify='cd ~/work/jr/fundify/fundify && docker/run'
+#alias sh-api='cd ~/work/jr/screenhub/api && docker-compose up'
+#alias sh-cms='cd ~/work/jr/screenhub/api/cms && NODE_ENV=local yarn start'
+#alias fundify='cd ~/work/jr/fundify/fundify && docker/run'
 alias docker-purge='docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi $(docker images -aq) && docker system prune --volumes'
 alias hm2='cd ~/work/kazendi/backend-web && bin/docker-run'
+
+alias l="ls -AF "                  
+alias ll="ls -AFl "                
+alias vi="vim"                     
+                                   
+alias m="less "                    
+alias -g M="| less"                
+alias -g W="| wc -l | sed 's/ //g'"
+alias ssh="TERM=xterm ssh"         
+
+# fzf integration CTRL-R
+#export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --color=always --exclude .git'
+# To apply the command to CTRL-T as well
+#export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 #if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 #        source /etc/profile.d/vte.sh
