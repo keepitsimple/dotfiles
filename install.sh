@@ -60,3 +60,12 @@ sudo apt update & sudo apt install -y teams
 # install remmina
 sudo apt-add-repository -y -u ppa:remmina-ppa-team/remmina-next
 sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret
+
+# install Foliate e-book reader
+sudo add-apt-repository ppa:apandada1/foliate
+sudo apt install foliate
+
+# Spotify 
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install -y spotify-client
