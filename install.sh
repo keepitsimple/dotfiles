@@ -40,11 +40,6 @@ sudo snap install webstorm --classic --edge
 # Install Gnome Shell Extensions support
 sudo apt-get install -y chrome-gnome-shell
 
-# install docker
-curl -fecho "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nullsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
- sudo apt-get update & sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-
 # install zsh
 sudo apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -69,3 +64,6 @@ sudo apt install foliate
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install -y spotify-client
+
+# Install fd-find (https://github.com/sharkdp/fd) & fzf
+sudo apt install fd-find fzf 
