@@ -60,6 +60,20 @@ sudo apt install -y remmina remmina-plugin-rdp remmina-plugin-secret
 sudo add-apt-repository ppa:apandada1/foliate
 sudo apt install foliate
 
+# install RHVoice TTS
+sudo add-apt-repository -y -u ppa:linvinus/rhvoice
+sudo apt-get install rhvoice  rhvoice-english
+
+# integrate RHVoice TTS to Foliate
+
+vim ~/rhvoiceTTS
+#!/bin/bash
+/usr/bin/RHVoice-client -s Irina+CLB -r 0.2 | aplay &
+trap 'kill $!; exit 0' INT
+wait
+
+
+
 # Spotify 
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
