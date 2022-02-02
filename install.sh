@@ -81,3 +81,6 @@ sudo apt-get update && sudo apt-get install -y spotify-client
 
 # Install fd-find (https://github.com/sharkdp/fd) & fzf
 sudo apt install fd-find fzf 
+
+# Install fast code searcher(https://github.com/ggreer/the_silver_searcher)
+sudo apt-get install -y silversearcher-ag
