@@ -17,7 +17,7 @@ ZSH_THEME='risto'
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-PROJECT_PATHS=(~/work ~/work/jr/screenhub)
+PROJECT_PATHS=(~/work ~/work/ggs)
 
 
 SAVEHIST=10000
@@ -74,7 +74,7 @@ SAVEHIST=10000
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras docker docker-compose common-aliases history autojump pj yarn)
+plugins=(git git-extras docker-compose common-aliases history pj fzf-zsh-plugin)
 
 source $ZSH/oh-my-zsh.sh
 
