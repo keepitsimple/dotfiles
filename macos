@@ -29,4 +29,6 @@ brew install --cask brave-browser
 brew install the_silver_searcher
 brew install --cask libreoffice
 
+brew install --cask maccy
+
 brew install --cask tomatobar
