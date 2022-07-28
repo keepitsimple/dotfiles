@@ -1,0 +1,32 @@
+Install on  MacOs
+
+brew install --cask iterm2
+brew install nvm
+Brew install git 
+brew install --cask webstorm
+brew install antigen
+To activate antigen, add the following to your ~/.zshrc:
+    source $(brew --prefix)/share/antigen/antigen.zsh
+
+brew install fzf
+brew install —cask far2l
+brew install --cask rectangle
+brew install --cask firefox
+brew install --cask dropbox
+brew install --cask keepassxc
+brew install openvpn
+
+
+brew install --cask vlc
+brew install --cask slack
+brew install --cask the-unarchiver
+brew install --cask flycut
+brew install --cask cheatsheet
+brew install --cask shottr
+
+brew install --cask brave-browser
+
+brew install the_silver_searcher
+brew install --cask libreoffice
+
+brew install --cask tomatobar
