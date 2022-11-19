@@ -84,3 +84,13 @@ sudo apt install fd-find fzf
 
 # Install fast code searcher(https://github.com/ggreer/the_silver_searcher)
 sudo apt-get install -y silversearcher-ag
+
+# cat on steroids
+sudo apt install bat
+
+# install alacritty (GPU xterm)
+sudo add-apt-repository ppa:aslatter/ppa -y
+sudo apt install -y alacritty
+
+# byobu - wrapper for tmux
+sudo apt-get install -y byobu
