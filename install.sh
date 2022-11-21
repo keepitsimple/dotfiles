@@ -97,3 +97,4 @@ sudo apt-get install -y byobu
 
 # xneur аналог Punto Switcher
 sudo apt install -y xneur
+sudo apt install -y hunspell-ru hunspell-en-us
