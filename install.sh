@@ -94,3 +94,6 @@ sudo apt install -y alacritty
 
 # byobu - wrapper for tmux
 sudo apt-get install -y byobu
+
+# xneur аналог Punto Switcher
+sudo apt install -y xneur
