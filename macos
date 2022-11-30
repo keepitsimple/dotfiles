@@ -32,3 +32,6 @@ brew install --cask libreoffice
 brew install --cask maccy
 
 brew install --cask tomatobar
+
+# https://github.com/boyter/scc toll for counting LOC
+brew install scc
